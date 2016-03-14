@@ -14,7 +14,7 @@ Note: Dont modify original str or word,Just return count ,Spaces can also be par
 
 int count_word_in_str_way_1(char *str, char *word)
 {
-	int length, w_indx = 0, s_indx = 0, check = 0, count = 0;
+	int length, w_indx = 0, s_indx = 0, check = 0, x = -1, y = -1, count = 0;
 	for (length = 0; word[length] != '\0'; length++);
 	if (str&&word)
 	{
@@ -25,38 +25,27 @@ int count_word_in_str_way_1(char *str, char *word)
 			{
 				check++;
 				w_indx++;
-				if (check == length)//check value is find to match word in given string.
+				s_indx++;
+				if (check == length)//check value is find to word in given string.
 				{
-					w_indx = 0;
+					x++;
+					s_indx = x;
 					check = 0;
 					count++;
-					//if (str[s_indx] == str[s_indx - 1])
-					//	s_indx--;
-
-					/*while (s_indx > 0)
-					{
-						else
-						{
-							break;
-						}
-					}*/
 				}
 			}
-			/*else if (str[s_indx] == 32)
-			{
-				w_indx = 0;
-				check = 0;
-			}*/
 			else
 			{
+				x = s_indx;
+				s_indx++;
 				check = 0;
 				w_indx = 0;
 			}
-			s_indx++;
+
 		}
 		return count;
 	}
-	  else
+	else
 	{
 		return 0;
 	}
