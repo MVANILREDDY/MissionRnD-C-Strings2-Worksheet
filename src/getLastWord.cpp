@@ -25,7 +25,7 @@ char * get_last_word(char * str)
 		}
 		else
 		{
-			while (length>0)
+			while (length>0)//if length greater than one,then finding last word.
 			{
 				if (str[length - 1] != 32 && end == -1)
 				{
