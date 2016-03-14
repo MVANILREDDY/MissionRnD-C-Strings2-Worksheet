@@ -32,7 +32,7 @@ char * get_sub_string(char *str, int i, int j)
 	int  index = 0;
 	if (str==NULL  || j >= count || i <0 || i>j)
 	{
-		return NULL;//if string is empty,then returning NULL or invalid i & j values  .
+		return NULL;//if string is empty or invalid i & j values,,then returning NULL  .
 	}
 	else
 	{
