@@ -23,8 +23,8 @@ char * get_last_word(char * str)
 			last[itr] = str[0];
 			itr++;
 		}
-		else
-		{
+		else         
+		{                   //start and end are used for storing starting and ending index of last word in given string.
 			while (length>0)//if length greater than one,then finding last word.
 			{
 				if (str[length - 1] != 32 && end == -1)
@@ -57,7 +57,7 @@ char * get_last_word(char * str)
 			}
 		}
 		last[itr] = '\0';
-		return last;
+		return last;//last is a string used to store last word in given string.
 	}
 	else
 	{
